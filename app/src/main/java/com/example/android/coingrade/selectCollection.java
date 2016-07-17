@@ -28,15 +28,14 @@ public class selectCollection extends Activity{
 
         final selectCollectionAdapter mAdapter = new selectCollectionAdapter(this);
         gridview.setAdapter(mAdapter);
-        /*gridview.setAdapter(new selectCollectionAdapter(this));*/
 
         gridview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> parent, View v,
                                     int position, long id) {
 
-                Toast.makeText(selectCollection.this, "" + position,
-                        Toast.LENGTH_SHORT).show();
-                /*
+                //Toast.makeText(selectCollection.this, "" + position,
+                //        Toast.LENGTH_SHORT).show();
+
                 // get the Entered  message
                 String message2="GO DAN GO";
                 String message = mAdapter.Group.member(position);
@@ -47,7 +46,6 @@ public class selectCollection extends Activity{
                 setResult(RESULT_OK,intentMessage);
                 // finish The activity
                 finish();
-                */
             }
         });
     }

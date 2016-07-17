@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Toast;
 
 public class MainCoinGradeActivity extends AppCompatActivity {
 
@@ -20,8 +21,20 @@ public class MainCoinGradeActivity extends AppCompatActivity {
     public void selectCollectionButton(View view) {
         Intent intent = new Intent(this, selectCollection.class);
         /*intent.putExtra(VALUE, "my custom string value");*/
-        //startActivityForResult(intent, COLLECTION_REQUEST_CODE);
-        startActivity(intent);
+        startActivityForResult(intent, COLLECTION_REQUEST_CODE);
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == COLLECTION_REQUEST_CODE) {
+            // Make sure the request was successful
+            if (resultCode == RESULT_OK) {
+                // TODO
+                // fetch the message String
+                String message = data.getStringExtra("MESSAGE");
+                Toast.makeText(this, "" + message,
+                        Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
 }
