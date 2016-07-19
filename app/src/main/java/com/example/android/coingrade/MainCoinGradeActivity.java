@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainCoinGradeActivity extends AppCompatActivity {
 
-    private static String VALUE = "myVaule";
-    static final int COLLECTION_REQUEST_CODE = 1;
+    private static final int COLLECTION_REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,8 @@ public class MainCoinGradeActivity extends AppCompatActivity {
                 // TODO
                 // fetch the message String
                 String message = data.getStringExtra("MESSAGE");
+                TextView textview = (TextView)findViewById(R.id.catalog_select);
+                textview.setText(message);
                 Toast.makeText(this, "" + message,
                         Toast.LENGTH_SHORT).show();
             }
