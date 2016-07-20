@@ -34,8 +34,8 @@ public class MainCoinGradeActivity extends AppCompatActivity {
                 String message = data.getStringExtra("MESSAGE");
                 TextView textview = (TextView)findViewById(R.id.catalog_select);
                 textview.setText(message);
-                Toast.makeText(this, "" + message,
-                        Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "" + message,
+//                        Toast.LENGTH_SHORT).show();
             }
         }
     }
