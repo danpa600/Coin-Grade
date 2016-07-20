@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 /**
  * Created by DJP on 7/10/2016.
+ * Select Collection Adapter builds the Select Collection interface
  */
 public class selectCollectionAdapter extends BaseAdapter {
     private Context mContext;
@@ -27,7 +28,7 @@ public class selectCollectionAdapter extends BaseAdapter {
     }
 
     public long getItemId(int position) {
-        return (position);
+        return Group.id(position);
     }
 
     // create a new ImageView for each item referenced by the Adapter

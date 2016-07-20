@@ -2,6 +2,7 @@ package com.example.android.coingrade;
 
 /**
  * Created by DJP on 7/16/2016.
+ * Collection class to manage working with collection data
  */
 public class collection {
 
@@ -20,5 +21,9 @@ public class collection {
 
     public int length() {
         return mCollection.length;
+    }
+
+    public int id(int position) {
+        return (position);
     }
 }
